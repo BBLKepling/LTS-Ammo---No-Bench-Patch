@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+<!-- No Bench -->
+
+	<!-- Description -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/WorkGiverDef[defName = "DoBillsAmmunitionBench"]</xpath>
+	</Operation>
+
+	<!-- Description -->
+	<Operation Class="PatchOperationRemove">
+		<xpath>/Defs/ThingDef[defName = "LTS_AmmunitionBench"]</xpath>
+	</Operation>
+
+	<!-- Description -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "Make_AmmoPrimitive"]/recipeUsers/li[text()="LTS_AmmunitionBench"]</xpath>
+		<value>
+                  <li>FueledSmithy</li>
+                  <li>ElectricSmithy</li>
+		</value>
+	</Operation>
+
+	<!-- Description -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "Make_Medieval"]/recipeUsers/li[text()="LTS_AmmunitionBench"]</xpath>
+		<value>
+                  <li>FueledSmithy</li>
+                  <li>ElectricSmithy</li>
+                  <li>TableMachining</li>
+		</value>
+	</Operation>
+
+	<!-- Description -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "Make_AmmoIndustrial"]/recipeUsers/li[text()="LTS_AmmunitionBench"]</xpath>
+		<value>
+                  <li>FueledSmithy</li>
+                  <li>ElectricSmithy</li>
+                  <li>TableMachining</li>
+		</value>
+	</Operation>
+
+	<!-- Description -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "Make_AmmoSpacer"]/recipeUsers/li[text()="LTS_AmmunitionBench"]</xpath>
+		<value>
+                  <li>TableMachining</li>
+		</value>
+	</Operation>
+
+	<!-- Description -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "Make_AmmoExplosive"]/recipeUsers/li[text()="LTS_AmmunitionBench"]</xpath>
+		<value>
+                  <li>FueledSmithy</li>
+                  <li>ElectricSmithy</li>
+                  <li>TableMachining</li>
+		</value>
+	</Operation>
+
+	<!-- Description -->
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/RecipeDef[defName = "Make_AmmoArchotech"]/recipeUsers/li[text()="LTS_AmmunitionBench"]</xpath>
+		<value>
+                  <li>TableMachining</li>
+		</value>
+	</Operation>
+
+</Patch>
